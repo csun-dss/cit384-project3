@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Take care of Pixel, a cheerful Giga Pet.">
+    <title>Pixel The Giga Pet</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="vendor/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+    <script src="devtools-demo.js" defer></script>
+  </head>
+  <body>
+    <main class="game-card">
+      <header>
+        <p class="eyebrow">YOUR POCKET COMPANION</p>
+        <h1>Pixel The Giga Pet</h1>
+        <p class="intro">Keep Pixel happy, healthy, and fresh for more tail wags.</p>
+      </header>
+      <section class="pet-area" aria-label="Pixel the dog">
+        <div class="image-frame"><img class="pet-image" src="images/pixel-dog.png" alt="Pixel, a happy black-and-tan dog"></div>
+        <p class="pet-message" aria-live="polite">Pixel is ready for an adventure!</p>
+      </section>
+      <section class="dashboard" aria-label="Pixel's status and care actions">
+        <h2>Pixel's status</h2>
+        <dl class="stats">
+          <div><dt>Name</dt><dd class="name"></dd></div>
+          <div><dt>Weight</dt><dd><span class="weight"></span> <small>lb</small></dd></div>
+          <div><dt>Happiness</dt><dd><span class="happiness"></span> <small>tail wags</small></dd></div>
+          <div><dt>Cleanliness</dt><dd><span class="cleanliness"></span> <small>%</small></dd></div>
+        </dl>
+        <div class="button-container" aria-label="Care for Pixel">
+          <button class="treat-button" type="button">🍪 Treat</button>
+          <button class="play-button" type="button">🎾 Play</button>
+          <button class="exercise-button" type="button">🏃 Exercise</button>
+          <button class="groom-button" type="button">🛁 Groom</button>
+        </div>
+      </section>
+      <section class="dashboard" aria-label="DevTools demonstrations">
+        <h2>DevTools practice</h2>
+        <p>Open Chrome DevTools before using these demonstrations. Errors are intentional.</p>
+        <div class="button-container">
+          <button id="demo-logs" type="button">Console messages</button>
+          <button id="demo-404" type="button">Missing file</button>
+          <button id="demo-typeerror" type="button">TypeError</button>
+          <button id="demo-slow" type="button">Slow handler</button>
+        </div>
+        <h3>Debug Pixel's treats</h3>
+        <p>Enter a starting weight and number of treats. Each treat adds 2 lb. The buggy mode reproduces the string-concatenation issue.</p>
+        <label>Starting weight <input id="demo-weight" type="number" value="28"></label>
+        <label>Treats <input id="demo-treats" type="number" value="2"></label>
+        <label><input id="demo-bug" type="checkbox"> Reproduce bug</label>
+        <button id="demo-calculate" type="button">Calculate weight</button>
+        <p id="demo-result" aria-live="polite">Result will appear here.</p>
+      </section>
+    </main>
+  </body>
+</html>
